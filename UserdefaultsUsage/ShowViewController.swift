@@ -10,8 +10,10 @@ import UIKit
 class ShowViewController: UIViewController {
 
     @IBOutlet weak var passLabel: UILabel!
+    
     var recievedPass = ""
     var userdefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if recievedPass == "" {

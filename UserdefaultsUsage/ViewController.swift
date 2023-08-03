@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var passTextField: UITextField!
+    
     var selectedPass = ""
     var userdefaults = UserDefaults.standard
     
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func saveButton(_ sender: Any) {
+        
         selectedPass = passTextField.text!
         userdefaults.set(selectedPass, forKey: "pass")
         performSegue(withIdentifier: "toShowVC", sender: nil)
