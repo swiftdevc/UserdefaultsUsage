@@ -16,17 +16,12 @@ class ShowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if recievedPass == "" {
             passLabel.text = userdefaults.string(forKey: "pass")
         }else{
             passLabel.text = recievedPass
             userdefaults.set(recievedPass, forKey: "pass")
         }
-
-        
-    
     }
-    
-
-
 }
