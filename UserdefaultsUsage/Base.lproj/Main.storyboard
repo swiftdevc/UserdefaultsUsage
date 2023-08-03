@@ -23,10 +23,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yc-18-uR6">
-                                <rect key="frame" x="166" y="244" width="61" height="35"/>
+                                <rect key="frame" x="125" y="235" width="142" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wgl-OH-7tZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmB-oe-iXM">
+                                <rect key="frame" x="147" y="342" width="100" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="next page"/>
+                                <connections>
+                                    <segue destination="Aio-OC-YkL" kind="show" id="TV5-nx-Nxx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,12 +46,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Ad-3Q-7fQ"/>
                     <connections>
+                        <outlet property="passTextField" destination="ekx-dD-6Mu" id="ZkV-f8-v3K"/>
                         <segue destination="Aio-OC-YkL" kind="show" identifier="toShowVC" id="ffZ-zE-BH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1060.3053435114502" y="3.5211267605633805"/>
         </scene>
         <!--Show View Controller-->
         <scene sceneID="v1N-d3-WLz">
@@ -61,6 +74,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="AM6-gX-pnK"/>
+                    <connections>
+                        <outlet property="passLabel" destination="avd-Pa-34B" id="77R-h3-5vG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwO-4W-Tm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +101,9 @@
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ffZ-zE-BH9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
